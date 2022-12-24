@@ -1,0 +1,101 @@
+:root{
+  --blueG:rgb(20,180, 255);
+  --yellowG:gb(250,220,10);
+}
+
+.__radius5{
+  border:radius:5px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  background-color:var(--blueG);
+  
+    
+}
+h3{
+    text-align: center;
+}
+.container{
+  /* Center child horizontally*/
+
+  margin:0 auto;
+  position:relative;
+  
+    justify-content:center;
+
+}
+input{
+  margin: 0 auto ;
+  display:block;
+  border:solid  black;
+  border-radius:10px;
+    background-color:rgb(250,220,10);
+   
+}
+#timerImp{
+   margin: 0 auto ;
+  display:block;
+  border:solid  black;
+  border-radius:10px;
+    background-color:rgb(250,220,10);
+   height:3em;
+  width:25vw;
+  text-align:center;
+  font-size:1.1em;
+ 
+  
+}
+.btn{
+ height:15vw; 
+   width:15vw; 
+  max-width:150px;
+    max-height:150px;
+  border-radius:50%;
+  margin:0.4em;
+
+  
+}
+
+
+
+#btn-start{
+  background-color: cyan;
+  
+}
+
+.buttons{
+  margin-top:1.5em;
+  display:flex;
+   justify-content:center;
+  
+}
+#timerText{
+   margin: 0 auto ;
+  height:3em;
+  width:25vw;
+  border:solid  black;
+  border-radius:10px;
+    background-color:rgb(250,220,10);
+    text-align:center;
+  font-size:1.1em;
+  
+}
+
+#total-div:empty{
+  background-color:black;
+  height:10px;
+  
+}
+#ongoing-div:empty{
+  background-color:yellow;
+ 
+  height:10px;
+  
+  
+}

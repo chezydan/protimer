@@ -14,8 +14,9 @@ let intervalId;
 let  playing=false;
 
 function setup() { 
-  wave = new p5.Oscillator();
-   wave.setType('sine') 
+  song=loadSound('sound.mp3')
+ // wave = new p5.Oscillator();
+   //wave.setType('sine') 
 }
 
 const setting= ()=>{ 
@@ -32,11 +33,13 @@ const setting= ()=>{
 }  
  function togglePlay(){
   if (!playing){
-    console.log("no")
-     wave.start();
-      wave.amp(0.1)
-      wave.freq(150)
-      playing=true;
+    //console.log("no")
+     //wave.start();
+      //wave.amp(0.1)
+      //wave.freq(150)
+       // playing=true;
+    song.play()
+  
     }
        else{
       wave.stop();

@@ -25,8 +25,9 @@ window.addEventListener('load',
  ()=>{  
    console.log("loaded")
      if(localStorage.getItem('times')!=undefined){
+       times =[]
     times=JSON.parse(localStorage.getItem("times")) }
-
+console.log("times:" + time)
      let timesElems= [...new Set(times)].slice(-PRESETS_QUANTITY)
   console.log(timesElems)
   for (let i=0; i<timesElems.length; i++){
@@ -48,24 +49,27 @@ const settingPreset=(event)=>{
   totalTime = parseInt(event.target.innerHTML)
   console.log(totalTime)
   timerText.innerHTML = totalTime
-  storeTime
+  storeTime()
 }
 const setting= ()=>{ 
   time= parseInt(timerImp.value)
   totalTime = parseInt(timerImp.value)
   timerText.innerHTML=time
-  storeTime
+  storeTime()
 }
 
 const storeTime= ()=>{
+  //if (times.length >  PRESETS_QUANTITY +2){
+  //times.pop()
+  //times.pop()}
   times.push(time)
   localStorage.setItem("times",JSON.stringify(times))
 
   
-  console.log([...new Set(times)]  )
+
 
   }
-  
+
  function togglePlay(){
   if (!playing){
     //console.log("no")
